@@ -1,4 +1,4 @@
-from templates import model_Fun
+from myproject import model_Fun
 import os
 
 

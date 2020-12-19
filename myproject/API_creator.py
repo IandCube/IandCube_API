@@ -1,9 +1,9 @@
-from templates import model
+from myproject import model
 
 
 def value():
     english = model.WedCreator(
-        "Heroku\Server Side\\templates\json\demo1.json")
+        "Heroku\Server Side\\myproject\json\demo1.json")
     english.reqvalueFromURL()
     return english.value
 
