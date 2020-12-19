@@ -1,0 +1,16 @@
+{
+    "info": {
+        "name": "考試通知查詢列印",
+        "URL": "https://reg6.lttc.org.tw/GEPT_Exam/DataSearch/Ticket_Search.aspx"
+
+
+    },
+    "method": [{
+        "HTMLtag": "table",
+        "searchTag": {
+            "class": "memoFormTXT"
+        }
+    }]
+
+
+}

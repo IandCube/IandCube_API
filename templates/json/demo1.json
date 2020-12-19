@@ -1,0 +1,24 @@
+{
+    "info": {
+        "name": "檢測日期",
+        "URL": "https://www.gept.org.tw/GEPT1/gepttestdate.aspx"
+
+
+    },
+    "method": [{
+            "HTMLtag": "div",
+            "searchTag": {
+                "class": "module_phonetable_outer"
+            }
+
+        },
+        {
+            "HTMLtag": "table",
+            "searchTag": {
+                "class": "module_phonetable"
+            }
+        }
+    ]
+
+
+}
