@@ -10,7 +10,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return ("<p>123</p>")
+    return ("<p>home</p>")
 
+@app.route('/test')
+def home():
+    return ("<p>test</p>")
 
-app.run()
+if __name__=="__main__":
+    app.run()
