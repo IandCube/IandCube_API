@@ -17,5 +17,5 @@ def test():
     return (api.value())
 
 if __name__=="__main__":
-    # app.run()
-    print(api.value())
+    app.run()
+    # print(api.value())
