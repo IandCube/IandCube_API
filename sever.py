@@ -14,7 +14,7 @@ def home():
 
 @app.route('/test')
 def test():
-    return ("<p>test</p>")
+    return (api.value())
 
 if __name__=="__main__":
     app.run()
