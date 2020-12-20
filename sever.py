@@ -13,7 +13,7 @@ def home():
     return ("")
 
 
-@app.route('/test')
+@app.route('/英檢報名表')
 def test():
     return (api.value())
 
