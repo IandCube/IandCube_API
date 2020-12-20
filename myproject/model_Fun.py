@@ -42,6 +42,31 @@ def writeJSON(path, write):
         print(os.getcwd())  # 顯示路徑
 
 
+def css_analysis(URL, HTMLcode):
+    css_list = HTMLcode.find_all(name="link", attrs={"rel": "stylesheet"})
+    if ("." in URL.split("/")[-1]):
+        URL_list = URL.split("/")
+        URL_list[-1] = ""
+        string = ""
+        for i in URL_list:
+            string = string + i + "/"
+        URL = string[:-1]
+    for (i, value) in enumerate(css_list):
+
+        css_URL = URL + value["href"]
+        css_list[i] = f'<link rel="stylesheet" href="{css_URL}">'
+
+    return css_list
+
+
 if __name__ == "__main__":
-    writeJSON("./demo3.json", ["hi"])
-    
+
+    URL = "https://www.gept.org.tw/GEPT1/gepttestdate.aspx"
+    if ("." in URL.split("/")[-1]):
+        URL_list = URL.split("/")
+        URL_list[-1] = ""
+        string = ""
+        for i in URL_list:
+            string = string + i + "/"
+        URL = string[:-1]
+    print(URL)

@@ -46,12 +46,12 @@ class WedCreator():
             print(HTMLcode)
 
         self.value = HTMLcode
+        self.css = model_Fun.css_analysis(self.file["info"]["URL"], wed)
 
         # except BaseException as err:
         #     print(err)
 
     def writeJSON(self, path):
-
         model_Fun.writeJSON(path, self.value)
 
 

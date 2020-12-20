@@ -10,12 +10,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return ("<p>home</p>")
+    return ("")
+
 
 @app.route('/test')
 def test():
     return (api.value())
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     app.run()
+
     # print(api.value())

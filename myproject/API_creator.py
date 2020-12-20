@@ -5,7 +5,14 @@ def value():
     english = model.WedCreator(
         "myproject/json/demo1.json")
     english.reqvalueFromURL()
-    return english.value
+
+    string = ""
+    for i in english.value:
+        string = str(i) + string
+    for i in english.css:
+        string = str(i) + string
+
+    return string
 
 
 if __name__ == "__main__":
