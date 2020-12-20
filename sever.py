@@ -13,7 +13,7 @@ def home():
     return ("<p>home</p>")
 
 @app.route('/test')
-def home():
+def test():
     return ("<p>test</p>")
 
 if __name__=="__main__":
