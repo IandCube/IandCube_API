@@ -12,6 +12,8 @@ def value():
     for i in english.css:
         string = str(i) + string
 
+    string = "<title>iframe_onload_is_success</title>" + string
+
     return string
 
 
