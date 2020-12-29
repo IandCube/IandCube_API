@@ -1,6 +1,6 @@
 {
     "info": {
-        "name": "考試通知查詢列印",
+        "name": "英檢_報名日期_考試通知查詢列印",
         "URL": "https://reg6.lttc.org.tw/GEPT_Exam/DataSearch/Ticket_Search.aspx"
 
 
@@ -11,6 +11,5 @@
             "class": "memoFormTXT"
         }
     }]
-
 
 }

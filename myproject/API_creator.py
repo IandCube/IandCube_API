@@ -1,20 +1,34 @@
-from myproject import model
+from myproject import model_Fun as model
 
 
-def value():
-    english = model.WedCreator(
-        "myproject/json/demo1.json")
-    english.reqvalueFromURL()
+def page2_1_b_a():
+    english = model.WedTool(
+        "myproject/json/英檢_報名日期_考試通知查詢列印.json")
+    return english.autoComplate()
 
-    string = ""
-    for i in english.value:
-        string = str(i) + string
-    for i in english.css:
-        string = str(i) + string
 
-    string = "<title>iframe_onload_is_success</title>" + string
+def page2_1_b_b():
+    english = model.WedTool(
+        "myproject/json/英檢_報名日期_測驗日程.json")
+    return english.autoComplate()
 
-    return string
+
+def page2_1_b_c():
+    english = model.WedTool(
+        "myproject/json/英檢_成績查詢_成績查詢.json")
+    return english.autoComplate()
+
+
+# def demo4():
+#     english = model.WedTool(
+#         "myproject/json/英檢_備考方法_全民英檢活動報.json")
+#     return english.autoComplate()
+
+
+# def demo5():
+#     english = model.WedTool(
+#         "myproject/json/英檢_備考方法_全民英檢電子報.json")
+#     return english.autoComplate()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+    "info": {
+        "name": "檢測日期",
+        "URL": "https://www.lttc.ntu.edu.tw/enewsletter.htm"
+
+
+    },
+    "method": [{
+        "HTMLtag": "div",
+        "searchTag": {
+            "class": "epaperNews"
+        }
+
+    }]
+
+
+}

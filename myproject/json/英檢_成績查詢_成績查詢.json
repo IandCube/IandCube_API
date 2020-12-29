@@ -1,0 +1,17 @@
+{
+    "info": {
+        "name": "英檢_成績查詢_成績查詢",
+        "URL": "https://www.gept.org.tw/Score/ScoreSearch.asp"
+
+
+    },
+    "method": [{
+        "HTMLtag": "table",
+        "searchTag": {
+            "id": "table1"
+        }
+
+    }]
+
+
+}
