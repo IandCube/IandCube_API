@@ -82,6 +82,9 @@ class WedTool():
         for i in self.__html_goal:
             string = string + str(i)
 
+        string = string.strip('[')
+        string = string.strip(']')
+
         return string
 
     def __URL_analysis(self):
@@ -132,6 +135,8 @@ class WedTool():
 
         self.__html_goal = code_analysed
 
+        self.link_analysis()
+
     def css_analysis(self):
         css_analysis = self.__wed_code.find_all(
             name="link", attrs={"rel": "stylesheet"})
@@ -144,8 +149,24 @@ class WedTool():
             self.__css_goal.extend(style)
 
     def link_analysis(self):
-        x = self.__html_goal[0].find_all("a")
-        print(str(x))
+        for i in [['a', 'href'], ['img', 'src']]:
+            x = self.__html_goal[0].find_all(i[0])
+            new_string = ""
+            html_goal_str = str(self.__html_goal)
+            # print(str(x))
+
+            for code in x:
+                new_string = urljoin(self.get_url(), code[i[1]])
+                # print(new_string)
+                html_goal_str = html_goal_str.replace(
+                    str(code[i[1]]), new_string)
+                # print(str(code["href"]))
+
+            self.__html_goal = []
+            self.__html_goal.append(
+                BeautifulSoup(html_goal_str, 'html.parser'))
+
+            # print(str((self.__html_goal).find_all("a")))
 
 
 if __name__ == "__main__":
@@ -175,4 +196,5 @@ if __name__ == "__main__":
 
     code = WedTool(
         file_path="School_Project\Heroku\Server Side\myproject\json\英檢_備考方法_全民英檢活動報.json")
-    WedTool_Test(code)
+    # WedTool_Test(code)
+    print(code.autoComplate())
